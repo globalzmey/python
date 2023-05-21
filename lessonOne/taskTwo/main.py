@@ -1,16 +1,20 @@
-# This is a sample Python script.
+"""
+Задача 2: Найдите сумму цифр трехзначного числа.
 
-# Press Shift+F10 to execute it or replace it with your code.
-# Press Double Shift to search everywhere for classes, files, tool windows, actions, and settings.
+*Пример:*
 
+123 -> 6 (1 + 2 + 3)
+100 -> 1 (1 + 0 + 0) |
 
-def print_hi(name):
-    # Use a breakpoint in the code line below to debug your script.
-    print(f'Hi, {name}')  # Press Ctrl+F8 to toggle the breakpoint.
+"""
 
+number = input("Введите трехзначное число: ")
+n = int(number)
 
-# Press the green button in the gutter to run the script.
-if __name__ == '__main__':
-    print_hi('PyCharm')
+d1 = n % 10
+n = n // 10
+d2 = n % 10
+n = n // 10
+sum = n + d1 + d2
 
-# See PyCharm help at https://www.jetbrains.com/help/pycharm/
+print("{} -> {} ({} + {} + {})".format(number, sum, n, d1, d2))
